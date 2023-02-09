@@ -3,12 +3,11 @@
 
 #include <string>
 
-class classFromLibrary {
-    public:
-
-        bool returnTrue(std::string input);
-        std::string returnEchoString(std::string input);
-
+class classFromLibrary
+{
+public:
+    bool returnTrue(std::string input);
+    std::string returnEchoString(std::string input);
 };
 
-#endif //LIBRARY_HEADER_H
+#endif // LIBRARY_HEADER_H drepo
