@@ -19,7 +19,7 @@ math_app: $(OBJECTS)
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 %.o: %.cpp 
 	$(QUIET)$(ECHO) "compiling $< ..."
-	$(CC) $(CXXFLAGS) -o "$@" -c $<
+	$(QUIET)$(CC) $(CXXFLAGS) -o "$@" -c $<
 
 install_dir:
 	$(QUIET)if [ ! -d "$(INSTALL_DIR)" ]; then mkdir "$(INSTALL_DIR)" ; fi
@@ -38,5 +38,5 @@ distclean: clean
 
 clean:
 	$(QUIET)$(ECHO) "removing all object files!"
-	$(QUIET)$(RM) -f '*.o'
+	$(QUIET)$(RM) -f *.o
 
